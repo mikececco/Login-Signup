@@ -1,0 +1,81 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /*flex -- are vertically and horizontally centering container*/
+    font-size: 18px;
+    background: url(images/background.png);
+    background-size: cover; /*takes entire width*/
+
+}
+
+.container{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem; /*1rem=18px, its based on parent(?)*/
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);/*0 = offset-x, 0 = offset-y, 40px = blur radius, rgba... = color*/ 
+    border-radius: var(--border-radius);/*roundness of borders*/
+    background: #ffff;
+}
+
+.container,
+.form_input_group,
+.form_button {
+    font: 400 1rem 'Source Sans Pro' , sans-serif;
+}
+
+.form >*:first-child { /*anything that has as a parent form bigger than first child, we assume that if a form has a first child, it should be targeted*/
+    margin-top: 0;
+}
+
+.form >*:last-child { /*we assume that if a form has a last child, it should be targeted*/
+    margin-bottom: 0;
+}
+
+.form_input {
+    display: block; /*does this need to be specified?*/
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    outline: none;
+    background: #eeeeee;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    transition: background 10s, border-color: 2s; /*not sure what it does*/
+}
+
+.form_input:focus {
+    border-color: var(--color-primary);
+    background: #ffff;
+}
+
+.form_input_group {
+    margin-bottom: 1rem;
+}
+
+.form_title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form_message {
+    text-align: center;
+    margin-bottom: 1rem;   
+}
+
+.form_message_success {
+    color: var(--color-success)
+}
+
+.form_message_error {
+    color: var(--color-error);
+}
