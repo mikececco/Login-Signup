@@ -12,14 +12,14 @@
 </head>
 <body>
     <div class="container">
-            <form class="form" action="index.html">
-                <h1 class="form_title">Hello, sign up to newsletter!</h1>
+            <form class="form" id="login">
+                <h1 class="form_title">Hello, welcome back!</h1>
             <div class="form_message form_message_error"></div>
             <div class="form_input_group">
                 <input type="text" name="Username" autofocus placeholder="Username or email" class="form_input">
                 <div class="form_input_error_message"></div>
             </div>
-
+            
             <div class="form_input_group">
                 <input type="password" name="Password" autofocus placeholder = "Password" class="form_input">   
                 <div class="form_input_error_message"></div>
@@ -34,8 +34,36 @@
                 <a id="linkCreateAccount" class="form_link">Don't have account? Create account</a>
             </p>
             
+            </form>
+            <form class="form  form_hidden" id="createAccount">
+                <h1 class="form_title">Create account</h1>
+            <div class="form_message form_message_error"></div>
+            <div class="form_input_group">
+                <input type="text" name="Username" autofocus placeholder="Username" class="form_input">
+                <div class="form_input_error_message"></div>
+            </div>
+            <div class="form_input_group">
+                <input type="text" name="Username" autofocus placeholder="Email address" class="form_input">
+                <div class="form_input_error_message"></div>
+            </div>
+            <div class="form_input_group">
+                <input type="password" name="Password" autofocus placeholder = "Password" class="form_input">   
+                <div class="form_input_error_message"></div>
+            </div>
+            <div class="form_input_group">
+                <input type="password" name="Password" autofocus placeholder = "Confirm password" class="form_input">   
+                <div class="form_input_error_message"></div>
+            </div>
+
+            <button type="submit" class="form_button">Submit</button>
+
+            <p class="form_text">
+                <a id="linkLogin" class="form_link">Already have an account? Sign in</a>
+            </p>
+            
             </form> 
     </div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
 

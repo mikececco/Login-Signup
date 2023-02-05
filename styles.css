@@ -33,6 +33,10 @@ body {
     font: 400 1rem 'Source Sans Pro' , sans-serif;
 }
 
+.form_hidden {
+    display: none;
+}
+
 .form >*:first-child { /*anything that has as a parent form bigger than first child, we assume that if a form has a first child, it should be targeted*/
     margin-top: 0;
 }
@@ -111,4 +115,18 @@ body {
 
 .form_button:active {
     transform: scale(0.98); /*scale size of the button by 2%*/
+}
+
+.form_text {
+    text-align: center;
+}
+
+.form_link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form_link:hover {
+    text-decoration: underline;
 }
